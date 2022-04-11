@@ -3,7 +3,7 @@
 ### 步骤一：运行etcd docker
 1.Create a network
 ```
-docker pull bitnami/etcd:3.5
+docker network create app-tier --driver bridge
 ```
 2.Launch the Etcd server instance
 ```
@@ -26,7 +26,7 @@ docker run -it --rm \
 
 5.进入docker bash
 ```
-docker run -it your_docker_container_id bash
+docker exec -it your_docker_container_id bash
 ```
 6.可以在容器里执行etcdctl命令了
 ```
